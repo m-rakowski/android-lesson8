@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:layout_marginTop="30dp">
+
+    <LinearLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="65dp"
+        android:id="@+id/linearLayout2">
+
+        <Button
+            android:id="@+id/buttonSong1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/song1"
+            android:onClick="readSong1Description"/>
+
+        <Button
+            android:id="@+id/buttonSong2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/song2"
+            android:onClick="readSong2Description"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="52dp"
+        android:layout_below="@+id/switch1"
+        android:layout_centerHorizontal="true">
+
+        <requestFocus />
+    </EditText>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="save"
+            android:text="Save" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:onClick="clear"
+            android:text="Clear" />
+
+    </LinearLayout>
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SD Card?"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_alignStart="@+id/linearLayout2" />
+
+</RelativeLayout>
